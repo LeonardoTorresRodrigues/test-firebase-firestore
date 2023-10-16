@@ -1,8 +1,12 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import logo from './logo.svg';
 import './App.css';
+import { addPlansAcess } from './services/dataAcess/plansAcess';
 
 function App() {
+  useEffect(()=>{
+    addPlansAcess();
+  },[])
   return (
     <div className="App">
       <header className="App-header">
