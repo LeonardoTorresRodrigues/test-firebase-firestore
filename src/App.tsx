@@ -1,12 +1,13 @@
 import React, { useEffect } from 'react';
 import logo from './logo.svg';
 import './App.css';
-import { addPlansAcess } from './services/dataAcess/plansAcess';
+import { addPlansAcess, setPlansAcess } from './services/dataAcess/plansAcess';
+import { setPlansAction, updatePlansAction } from './services/actions/plansAction';
 
 function App() {
-  useEffect(()=>{
-    addPlansAcess();
-  },[])
+  useEffect(() => {
+    setPlansAction({ value: 69 }, 'aboolUIGKp5EclFFqbdy');
+  }, [])
   return (
     <div className="App">
       <header className="App-header">
