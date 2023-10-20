@@ -16,3 +16,8 @@ export async function updatePlansAcess(body: any, id: string) {
   const response = await plansReference.doc(id).update(body);
   return response;
 }
+
+export async function getPlansAcess() {
+  const response = await plansReference.get();
+  return response;
+}

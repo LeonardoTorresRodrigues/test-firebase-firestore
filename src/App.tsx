@@ -2,11 +2,13 @@ import React, { useEffect } from 'react';
 import logo from './logo.svg';
 import './App.css';
 import { addPlansAcess, setPlansAcess } from './services/dataAcess/plansAcess';
-import { setPlansAction, updatePlansAction } from './services/actions/plansAction';
+import { getPlansAction, setPlansAction, updatePlansAction } from './services/actions/plansAction';
 
 function App() {
   useEffect(() => {
-    setPlansAction({ value: 69 }, 'aboolUIGKp5EclFFqbdy');
+    getPlansAction().then((res) => {
+      console.log(res);
+    });
   }, [])
   return (
     <div className="App">
