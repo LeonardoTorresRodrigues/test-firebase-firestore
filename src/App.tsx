@@ -8,7 +8,7 @@ import { getPlansObserver } from './services/observers/plansObservers';
 function App() {
   const [plans, setPlans] = useState<any[]>([]);
   useEffect(() => {
-    getPlansObserver(setPlans)
+    getPlansObserver(setPlans, ['year', 'month', 'quarter'], 'snxn6GMp9jQPmQvAbxdL')
   }, [])
   return (
     <div className="App">
