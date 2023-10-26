@@ -1,16 +1,17 @@
+import { PlanType } from "../../interfaces/plansInterfaces";
 import { addPlansAcess, getPlansAcess, setPlansAcess, updatePlansAcess } from "../dataAcess/plansAcess";
 
-export async function addPlansAction(body: any) {
+export async function addPlansAction(body: PlanType) {
   const response = await addPlansAcess(body);
   return response.id;
 }
 
-export async function setPlansAction(body: any, id: string) {
+export async function setPlansAction(body: PlanType, id: string) {
   const response = await setPlansAcess(body, id);
   return response;
 }
 
-export async function updatePlansAction(body: any, id: string) {
+export async function updatePlansAction(body: PlanType, id: string) {
   const response = await updatePlansAcess(body, id);
   return response;
 }

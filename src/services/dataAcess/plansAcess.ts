@@ -1,19 +1,38 @@
 import { db } from "../../firebaseConfig";
+import { PlanAddType, PlanType } from "../../interfaces/plansInterfaces";
 
 const plansReference = db.collection('planos');
 
-export async function addPlansAcess(body: any) {
-  const response = await plansReference.add(body);
+export async function addPlansAcess(body: PlanType) {
+  const planObject: PlanAddType = {
+    text: body.text,
+    value: body.value,
+    type: body.type,
+    gym: db.collection('academias').doc(body.gymId)
+  }
+  const response = await plansReference.add(planObject);
   return response;
 }
 
-export async function setPlansAcess(body: any, id: string) {
-  const response = await plansReference.doc(id).set(body);
+export async function setPlansAcess(body: PlanType, id: string) {
+  const planObject: PlanAddType = {
+    text: body.text,
+    value: body.value,
+    type: body.type,
+    gym: db.collection('academias').doc(body.gymId)
+  }
+  const response = await plansReference.doc(id).set(planObject);
   return response;
 }
 
-export async function updatePlansAcess(body: any, id: string) {
-  const response = await plansReference.doc(id).update(body);
+export async function updatePlansAcess(body: PlanType, id: string) {
+  const planObject: PlanAddType = {
+    text: body.text,
+    value: body.value,
+    type: body.type,
+    gym: db.collection('academias').doc(body.gymId)
+  }
+  const response = await plansReference.doc(id).update(planObject);
   return response;
 }
 
