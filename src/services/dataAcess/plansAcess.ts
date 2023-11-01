@@ -40,3 +40,8 @@ export async function getPlansAcess() {
   const response = await plansReference.get();
   return response;
 }
+
+export async function deletePlansAcess(id: string) {
+  const response = await plansReference.doc(id).delete();
+  return response;
+}

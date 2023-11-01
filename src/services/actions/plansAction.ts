@@ -1,5 +1,5 @@
 import { PlanType } from "../../interfaces/plansInterfaces";
-import { addPlansAcess, getPlansAcess, setPlansAcess, updatePlansAcess } from "../dataAcess/plansAcess";
+import { addPlansAcess, deletePlansAcess, getPlansAcess, setPlansAcess, updatePlansAcess } from "../dataAcess/plansAcess";
 
 export async function addPlansAction(body: PlanType) {
   const response = await addPlansAcess(body);
@@ -23,4 +23,9 @@ export async function getPlansAction() {
     plans.push(doc.data())
   });
   return plans;
+}
+
+export async function deletePlansAction(id: string) {
+  const response = await deletePlansAcess(id);
+  return response;
 }

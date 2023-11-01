@@ -13,3 +13,11 @@ export interface PlanAddType {
   type: string;
   value: number;
 }
+
+export interface PlanGetType {
+  gym: firebase.firestore.DocumentReference<firebase.firestore.DocumentData>;
+  text: string;
+  type: string;
+  value: number;
+  id: string;
+}
