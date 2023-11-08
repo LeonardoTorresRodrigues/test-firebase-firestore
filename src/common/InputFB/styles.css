@@ -1,0 +1,13 @@
+.input-FB-container {
+  display: flex;
+  flex-direction: column;
+  margin: 8px;
+}
+
+.input-FB-container input {
+  margin: 4px;
+}
+
+.input-FB-container label {
+  margin: 4px;
+}

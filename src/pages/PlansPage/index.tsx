@@ -5,6 +5,7 @@ import { addPlansAction } from '../../services/actions/plansAction';
 import { getPlansObserver } from '../../services/observers/plansObservers';
 import { PlanGetType } from '../../interfaces/plansInterfaces';
 import PlansTable from '../../components/PlansTable';
+import PlanPostModal from '../../components/PlanPostModal';
 
 const PlansPage: React.FC = () => {
   const [plans, setPlans] = useState<PlanGetType[]>([]);
@@ -13,6 +14,7 @@ const PlansPage: React.FC = () => {
   }, [])
   return (
     <div className="plans-page-container">
+      <PlanPostModal />
       <PlansTable plans={plans} />
       <ButtonFB
         text='Adicionar'
