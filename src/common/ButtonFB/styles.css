@@ -1,0 +1,13 @@
+.button-FB {
+  background-color: #e63617;
+  color: white;
+  padding: 8px;
+  border-radius: 16px;
+  font-size: 18px;
+  border: none;
+  cursor: pointer;
+}
+
+.button-FB:hover {
+  background-color: #e63617b0;
+}
