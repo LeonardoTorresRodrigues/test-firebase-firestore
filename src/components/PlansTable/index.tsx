@@ -11,14 +11,14 @@ interface IProps {
 const PlansTable: React.FC<IProps> = ({ plans }) => {
   return (
     <>
-      <table>
-        <tr>
+      <table className='plans-table-container'>
+        <tr className='plans-table-header'>
           <th>Tipo</th>
           <th>Preço</th>
           <th>Actions</th>
         </tr>
         {plans.map((elem) => (
-          <tr>
+          <tr className='plans-table-body'>
             <td>
               <p>{elem.text}</p>
             </td>

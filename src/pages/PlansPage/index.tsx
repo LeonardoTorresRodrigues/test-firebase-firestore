@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import './styles.css';
 import ButtonFB from '../../common/ButtonFB';
-import { addPlansAction, deletePlansAction } from '../../services/actions/plansAction';
+import { addPlansAction } from '../../services/actions/plansAction';
 import { getPlansObserver } from '../../services/observers/plansObservers';
 import { PlanGetType } from '../../interfaces/plansInterfaces';
 import PlansTable from '../../components/PlansTable';
@@ -12,7 +12,7 @@ const PlansPage: React.FC = () => {
     getPlansObserver(setPlans, ['year', 'month', 'quarter'], 'snxn6GMp9jQPmQvAbxdL')
   }, [])
   return (
-    <div className="App">
+    <div className="plans-page-container">
       <PlansTable plans={plans} />
       <ButtonFB
         text='Adicionar'
